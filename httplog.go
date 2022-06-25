@@ -137,7 +137,7 @@ func (r *httpRequestLog) MarshalLogObject(enc zapcore.ObjectEncoder) error {
 	}
 	reqID := middleware.GetReqID(r.Context())
 	if reqID != "" {
-		enc.AddString("reqId", reqID)
+		enc.AddString("requestID", reqID)
 	}
 
 	//
